@@ -4,12 +4,12 @@ import numpy as np
 def rotate(size:int, pos, times)-> tuple:
     size_tuple = (2**size-1,2**size-1)
     if times == 1:
-        return tuple(np.add((-pos[1],pos[0]),size_tuple))
+        return tuple(np.add((-pos[1],pos[0]),(2**size-1,0)))
     if times == 2:
         return tuple(np.add((-pos[0],-pos[1]),size_tuple))
     
-    # This is the case times == 3
-    return tuple(np.add((pos[1], -pos[0]), size_tuple))
+    if times == 3:
+        return tuple(np.add((pos[1], -pos[0]), (0,2**size-1)))
 
 if __name__ == '__main__':
     print(rotate(2,(0,0),1))
