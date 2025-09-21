@@ -1,4 +1,5 @@
 from rotations import rotate
+import numpy as np
 
 def solution(n:int,pos:tuple) -> list:
     pos = list(pos)
@@ -64,7 +65,7 @@ def solution(n:int,pos:tuple) -> list:
                         [2**(n-1)-1,2**(n-1)],
                         [2**(n-1),2**(n-1)]]
 
-    if pos[1] >= 2**(n - 1) > pos[0]:
+    elif 2**(n - 1) > pos[0]:
         quad_c = solution(n-1,(pos[0],pos[1]-2**(n-1)))
         quad_d = solution(n-1,(0,0))
         quad_b = []
@@ -89,7 +90,7 @@ def solution(n:int,pos:tuple) -> list:
                         [2**(n-1),2**(n-1)]]
 
 
-    if pos[1] >= 2**(n-1) and pos[0] >= 2**(n-1):
+    else:
         quad_d = solution(n-1,(pos[0]-2**(n-1),pos[1]-2**(n-1)))
         quad_b = solution(n-1,(0,2**(n-1)-1))
         quad_a = []
@@ -117,3 +118,4 @@ def solution(n:int,pos:tuple) -> list:
 
 if __name__ == "__main__":
     print(np.array(solution(4,(5,2))))
+    print(np.array(solution(4,(5,2))).shape)

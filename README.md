@@ -2,7 +2,7 @@
 This repo is the solution for the [Golomb's Teorem](https://en.wikipedia.org/wiki/Tromino). 
 
 For the explanation of the code on spanish, I made a PDF that explains the 
-process, you can read it [here](https://google.com).
+process, you will be able to read it later.
 
 ## Implementation
 The function receives the tuple `(n,pos)` where `n` is the size of the 
