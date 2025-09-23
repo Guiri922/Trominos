@@ -1,8 +1,8 @@
 # Tromino
 This repo is the solution for the [Golomb's Teorem](https://en.wikipedia.org/wiki/Tromino). 
 
-For the explanation of the code on spanish, I made a PDF that explains the 
-process, you will be able to read it later.
+For the explanation of the code on spanish, I'm currently making a paper with the full
+explanation of why and how this code works including it complexity time.
 
 ## Implementation
 The function receives the tuple `(n,pos)` where `n` is the size of the 
