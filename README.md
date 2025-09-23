@@ -24,3 +24,7 @@ transformation and then, it moves the full board to the side is supposed to be.
 After that, the code gives 4 boards with 4 holes in it, but 3 of those 4 
 holes are aligned to form another trinomio, so it put it, after that it 
 join all the boards and returns the list of Trinomios for fulling that board.
+
+## IMPORTANT
+I'm aware is not the most readable code, and I have plans to refactor some parts
+to make it easier to read.
